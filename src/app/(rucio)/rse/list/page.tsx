@@ -4,6 +4,7 @@ import { RSEViewModel } from "@/lib/infrastructure/data/view-model/rse";
 import useComDOM from "@/lib/infrastructure/hooks/useComDOM";
 import { HTTPRequest } from "@/lib/sdk/http";
 import { mockUseComDOM, fixtureRSEViewModel } from "test/fixtures/table-fixtures";
+import DirectStreamingTable from "@/component-library/direct-streaming-table";
 export default function Page() {
 
     const setRSEQuery = async (rseExpression: string) => {
@@ -29,10 +30,7 @@ export default function Page() {
     )
 
     return (
-        <ListRSEStory
-            comdom={RSESearchComDOM}
-            setRSEQuery={setRSEQuery}
-        />
+        <DirectStreamingTable/>
     )
 }
             
